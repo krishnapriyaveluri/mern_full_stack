@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+       table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 80%; 
+            margin: 20px auto; 
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            margin-left: 40%; 
+        }  
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;" style="color: blue;">Registration Form</h1>
+    <form action="your_server_script.php" method="POST">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name" ></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name" ></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" ></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" ></td>
+            </tr>
+            <tr>
+                <td>Re-enter Password:</td>
+                <td><input type="password" name="confirm_password" ></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" id="male"><label for="male">Male</label>
+                    <input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" ></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone_number"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" rows="4" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td><input type="text" name="state" ></td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select name="country" >
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="India">India</option>
+                        <option value="Russia">Russia</option>
+                        <option value="DUBAI">DUBAI</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Others">others</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Languages known:</td>
+                <td>
+                    <input type="checkbox" name="languages_known[]" value="English" id="english"><label for="english">English</label>
+                    <input type="checkbox" name="languages_known[]" value="Kannada" id="kannada"><label for="kannada">Kannada</label>
+                    <input type="checkbox" name="languages_known[]" value="Hindi" id="hindi"><label for="hindi">Hindi</label>
+                    <input type="checkbox" name="languages_known[]" value="Telugu" id="telugu"><label for="telugu">Telugu</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="declaration" required> Hereby I declare all the given details are true
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <p>Login to <a href="https://ethnus.com/"> ethnus website</p>
+                </td>
+        </table>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+
